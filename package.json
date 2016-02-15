@@ -39,7 +39,7 @@
     "eslint": "^1.10.3",
     "expect.js": "0.3.1",
     "in-publish": "^2.0.0",
-    "j2c":"git+ssh://git@github.com:j2css/j2c.git#v1_preview",
+    "j2c":"https://github.com/j2css/j2c/archive/v1_preview.tar.gz",
     "mocha": "^2.3.4",
     "perfectionist": "^2.1.2",
     "postcss": "^5.0.14",

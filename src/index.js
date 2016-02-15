@@ -17,8 +17,8 @@ module.exports = {
       },
       d: function(prop, col, value, semi) {
         if (depth || /^(?:animation(?:-property)?)|transition$/.test(prop)) {
-            next.d('-webkit-'+prop, col, value, semi)
-          }
+          next.d('-webkit-'+prop, col, value, semi)
+        }
         next.d(prop, col, value, semi)
       }
     }
@@ -48,9 +48,9 @@ module.exports = {
     var keyframesHandlers = {
       a: function(rule,_2,_3, term) {
         if (rule == '@keyframes') {
-            next.a('@-error-nested', ' ', '@keyframes', ';')
-            error = true
-          }
+          next.a('@-error-nested', ' ', '@keyframes', ';')
+          error = true
+        }
         if (/\{/.test(term)) depth++
 
         acc.push['a', [].slice(arguments)]
@@ -58,20 +58,20 @@ module.exports = {
       c: function(close) {
         acc.push(['c', [close]])
         if (depth === 1 && !error) {
-            handlers = flushHandlers
-            acc[0][1][0] = '@-webkit-keyframes'
-            acc.forEach(function(l){
-                handlers[l[0]].apply(next, l[1])
-              })
-            depth--
-            acc[0][1][0] = '@keyframes'
-            acc.forEach(function(l){
-                handlers[l[0]].apply(next, l[1])
-              })
-            handlers = normalHandlers
-          } else {
-            depth--
-          }
+          handlers = flushHandlers
+          acc[0][1][0] = '@-webkit-keyframes'
+          acc.forEach(function(l){
+            handlers[l[0]].apply(next, l[1])
+          })
+          depth--
+          acc[0][1][0] = '@keyframes'
+          acc.forEach(function(l){
+            handlers[l[0]].apply(next, l[1])
+          })
+          handlers = normalHandlers
+        } else {
+          depth--
+        }
       },
       d: function() {
         acc.push(['d', [].slice.call(arguments)])

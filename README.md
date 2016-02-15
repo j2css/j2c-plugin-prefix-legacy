@@ -6,10 +6,22 @@ Brings back the prefix tooling of `j2c` `v0.11.0-`.
 
 ## Usage:
 
+
+```SH
+$ npm install j2c-plugin-prefix-legacy
+```
+
+...possibly using the `--save` flag to put it in the dependencies of your `package.json`
+
+Then
+
 ```JS
-var j2c = require('j2c')().use(require('j2c-plugin-prefix-legacy'))
+var j2c = require('j2c')() // create a new instance.
+j2c.use(require('j2c-plugin-prefix-legacy'))
+
 // use your fresh `j2c` instance here.
 ```
+
 ## License
 
 MIT License

@@ -25,19 +25,19 @@ if(!('animation' in style) && '-webkit-animation' in style) {
       x: next.x ,
       d: function(prop, col, value, semi) {
         if (depth || /^(?:animation(?:-property)?)|transition$/.test(prop)) {
-            next.d('-webkit-'+prop, col, value, semi)
-          }
+          next.d('-webkit-'+prop, col, value, semi)
+        }
         if (depth || !/^(?:animation(?:-property)?)|transition$/.test(prop)) {
-            next.d(prop, col, value, semi)
-          }
+          next.d(prop, col, value, semi)
+        }
       }
     }
     if (!inline) {
       res.a = function(rule, space, params, term) {
         if (rule === '@keyframes') {
-            depth++
-            rule = '@-webkit-keyframes'
-          }
+          depth++
+          rule = '@-webkit-keyframes'
+        }
         next.a(rule, space, params, term)
       }
       res.c = function() {
