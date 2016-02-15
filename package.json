@@ -41,7 +41,6 @@
     "in-publish": "^2.0.0",
     "j2c":"git+ssh://git@github.com:j2css/j2c.git#v1_preview",
     "mocha": "^2.3.4",
-    "mocha-lcov-reporter": "^1.0.0",
     "perfectionist": "^2.1.2",
     "postcss": "^5.0.14",
     "postcss-minify-params": "^1.0.4",
