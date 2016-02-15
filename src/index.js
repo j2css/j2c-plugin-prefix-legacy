@@ -39,11 +39,15 @@ module.exports = {
     normalHandlers.c = next.c
     normalHandlers.s = next.s
 
-    var flushHandlers = Object.assign({}, normalHandlers, {
+    var flushHandlers = {
       a: function (rule, space, param, term) {
         next.a(rule, space, param, term)
-      }
-    })
+      },
+      c: normalHandlers.c,
+      d: normalHandlers.d,
+      s: normalHandlers.s,
+      x: normalHandlers.x
+    }
 
     var keyframesHandlers = {
       a: function(rule,_2,_3, term) {
