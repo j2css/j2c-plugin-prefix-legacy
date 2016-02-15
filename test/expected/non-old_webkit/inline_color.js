@@ -1,0 +1,1 @@
+module.exports = function(j2c){return 'color:red;'}

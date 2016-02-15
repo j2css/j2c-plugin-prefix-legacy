@@ -1,0 +1,47 @@
+{
+  "name": "j2c-plugin-prefix-legacy",
+  "version": "0.0.0",
+  "description": "bring back the legacy j2c prefix behavior",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pierre-Yves Gérardy",
+  "license": "ISC",
+  "main": "src/index.js",
+  "jsnext:main": "src/index.es6.js",
+  "browser": "dist/j2c-plugin-prefix-legacy.js",
+  "scripts": {
+    "preversion": "npm run -s all",
+    "prepublish": "(in-publish && git push --follow-tags) || not-in-publish",
+    "all": "npm run build && npm run lint && npm run cover",
+    "dev": "npm run clean && npm run rollup-cjs && npm run test",
+    "build": "npm run -s clean && npm run rollup-cjs && npm run rollup-iife && npm run uglify && npm run gzip",
+    "rollup-cjs": "rollup -i src/index.es6.js -o dist/j2c-plugin-prefix-legacy.js -f cjs",
+    "rollup-iife": "rollup -i src/index.es6.js -o dist/j2c-plugin-prefix-legacy.global.js -f iife -n j2cPluginPrefixLegacy",
+    "uglify": "uglifyjs dist/j2c-plugin-prefix-legacy.global.js -c -m --comments > dist/j2c-plugin-prefix-legacy.global.min.js",
+    "gzip": "cat dist/j2c-plugin-prefix-legacy.global.min.js | gzip -9 > dist/j2c-plugin-prefix-legacy.global.min.js.gz",
+    "clean": "rm -f dist/*.js && rm -f dist/inline/*.js",
+    "lint": "echo \"linting...\" && eslint --fix src/*.js test/test.js scripts/*.js",
+    "test": "mocha --ui qunit",
+    "cover": "istanbul cover _mocha -- -R nyan --ui qunit && npm run -s check-coverage",
+    "check-coverage": "istanbul check-coverage --branches 100",
+    "travis": "istanbul cover _mocha --report lcovonly -- -R spec --ui qunit && (codecov || true) && npm run -s check-coverage"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "expect.js": "0.3.1",
+    "in-publish": "^2.0.0",
+    "j2c":"git+ssh://git@github.com:j2css/j2c.git#v1_preview",
+    "mocha": "^2.3.4",
+    "mocha-lcov-reporter": "^1.0.0",
+    "perfectionist": "^2.1.2",
+    "postcss": "^5.0.14",
+    "postcss-minify-params": "^1.0.4",
+    "postcss-minify-selectors": "^2.0.2",
+    "rollup": "^0.24.0",
+    "uglify-js": "^2.6.0",
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.2"
+  }
+}
