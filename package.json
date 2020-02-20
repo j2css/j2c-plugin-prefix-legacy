@@ -47,7 +47,7 @@
     "postcss-minify-selectors": "^2.0.2",
     "rollup": "^0.25.0",
     "uglify-js": "^2.6.0",
-    "codecov": "^1.0.1",
+    "codecov": "^3.6.5",
     "istanbul": "^0.4.2"
   }
 }
