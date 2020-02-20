@@ -1,27 +1,4 @@
-# j2c-plugin-prefix-legacy [![npm][npm_img]][npm_url] ![.min.gz][size_img]
-
-[![Join the chat at https://gitter.im/j2css/j2c][gitter_img]][gitter_url]
-[![Build Status][trav_img]][trav_url]
-[![Coverage Status][cov_img]][cov_url]
-[![Dependency Status][deps_img]][deps_url]
-[![bitHound Score][bithound_img]][bithound_url]
-
-[trav_img]: https://travis-ci.org/j2css/j2c-plugin-prefix-legacy.svg?branch=master
-[trav_url]: https://travis-ci.org/j2css/j2c-plugin-prefix-legacy
-[cov_img]: https://codecov.io/github/j2css/j2c-plugin-prefix-legacy/coverage.svg?branch=master
-[cov_url]: https://codecov.io/github/j2css/j2c-plugin-prefix-legacy?branch=master
-[npm_img]: https://img.shields.io/npm/v/j2c-plugin-prefix-legacy.svg
-[npm_url]: https://npmjs.com/package/j2c-plugin-prefix-legacy
-[size_img]: https://badges.herokuapp.com/size/npm/j2c/dist/j2c-plugin-prefix-legacy.global.min.js.gz?label=.min.gz
-[deps_img]: https://david-dm.org/j2css/j2c-plugin-prefix-legacy.svg
-[deps_url]: https://david-dm.org/j2css/j2c-plugin-prefix-legacy
-[bithound_img]: https://www.bithound.io/github/j2css/j2c-plugin-prefix-legacy/badges/score.svg
-[bithound_url]: https://www.bithound.io/github/j2css/j2c-plugin-prefix-legacy/
-[gitter_img]: https://badges.gitter.im/Join%20Chat.svg
-[gitter_url]: https://gitter.im/j2css/j2c
-
-[![Build Status](https://travis-ci.org/j2css/j2c-plugin-prefix-legacy.svg?branch=master)](https://travis-ci.org/j2css/j2c-plugin-prefix-legacy)
-[![codecov.io](https://codecov.io/github/j2css/j2c-plugin-prefix-legacy/coverage.svg?branch=master)](https://codecov.io/github/j2css/j2c-plugin-prefix-legacy?branch=master)
+# Archived (was: j2c-plugin-prefix-legacy)
 
 Brings back the prefix tooling of `j2c` `v0.11.0-`.
 
